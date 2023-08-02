@@ -34,7 +34,7 @@ global.mess = {
 //—————「 Set Limit 」—————//
 global.limitawal = {
     premium: "Infinity",
-    free: 50,
+    free: 1000,
 }
 
 //—————「 Set Image 」—————//
