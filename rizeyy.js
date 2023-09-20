@@ -2141,10 +2141,6 @@ ${Object.keys(used)
 			// Stalk Fitur
 			case "igstalk":
 				{
-					if (!isPremium && global.db.data.users[m.sender].limit < 1)
-						return newReply(mess.endLimit); // respon ketika limit habis
-					db.data.users[m.sender].limit -= 10;
-					newReply(`🚩 10 Limit Used`);
 					if (args.length == 0)
 						return newReply(`Example: ${prefix + command} dementorize`);
 					newReply(mess.wait);
@@ -2173,7 +2169,7 @@ ${Object.keys(used)
 				{
 					if (args.length == 0)
 						return newReply(
-							`Example: ${prefix + command} AdrianTzy`,
+							`Example: ${prefix + command} Rizemary`,
 						);
 					newReply(mess.wait);
 					axios
