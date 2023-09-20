@@ -2153,6 +2153,7 @@ ${Object.keys(used)
 							`https://www.instagram.com/${args[0]}/?__a=1&__d=1`,
 						)
 						.then(({ data }) => {
+							console.log(data);
 							var data = data.qraphql.user;
 							var caption = `Username : ${data.username}\n`;
 							caption += `Full Name : ${data.full_name || '<no name>'}\n`;
