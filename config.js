@@ -13,7 +13,7 @@ global.ownernomer = ["6283135080900"]
 global.premium = ['6283135080900']
 
 //—————「 Set Wm 」—————//
-global.packname = ''
+global.packname = '.:: Created with Rizey Bot ::.'
 global.author = 'Rizemary リズマリー'
 global.prefa = ['', '.']
 global.sp = '•'
