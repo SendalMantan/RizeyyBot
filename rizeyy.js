@@ -17,13 +17,10 @@ const axios = require("axios");
 const path = require("path");
 const os = require("os");
 const fsx = require("fs-extra");
-const jsobfus = require("javascript-obfuscator");
 const moment = require("moment-timezone");
 const { JSDOM } = require("jsdom");
 const speed = require("performance-now");
 const { performance } = require("perf_hooks");
-const { Primbon } = require("scrape-primbon");
-const primbon = new Primbon();
 const {
 	TelegraPh,
 	UploadFileUgu,
@@ -256,31 +253,6 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
 				.fill(null)
 				.map(() => ((Math.random() * 16) | 0).toString(16))
 				.join("");
-		}
-
-		async function obfus(query) {
-			return new Promise((resolve, reject) => {
-				try {
-					const obfuscationResult = jsobfus.obfuscate(query, {
-						compact: false,
-						controlFlowFlattening: true,
-						controlFlowFlatteningThreshold: 1,
-						numbersToExpressions: true,
-						simplify: true,
-						stringArrayShuffle: true,
-						splitStrings: true,
-						stringArrayThreshold: 1,
-					});
-					const result = {
-						status: 200,
-						author: `AdrianTzy`,
-						result: obfuscationResult.getObfuscatedCode(),
-					};
-					resolve(result);
-				} catch (e) {
-					reject(e);
-				}
-			});
 		}
 
 		async function newReply(teks) {
@@ -1036,22 +1008,7 @@ ${Object.keys(used)
 					let tqtonya = `
   _*TERIMA KASIH KEPADA*_
 
-  *• ALLAH SWT*
-  *• NABI MUHAMMAD SAW*
-  *• MY PARENTS*
-  *• AdrianTzy ( Author )*
-  *• LoL-Human ( Rest APIs )*
-  *• XTRAM ( TEAMS )*
-  *• DanuDev*
-  *• Reii Code*
-  *• WH MODS*
-  *• YogzzDevX*
-  *• KilersBotz*
-  *• LuckyCat*
-  *• Rullxzz*
-  *• Para Subscriber*
-  *• Para Penyedia Module*
-  *• Para Donatur*
+  *• Semua users*
   `;
 					conn.sendMessage(m.chat, {
 						text: tqtonya,
@@ -2066,12 +2023,13 @@ ${Object.keys(used)
 					newReply(mess.wait);
 					let media = await conn.downloadMediaMessage(qmsg);
 					let audio = await toAudio(media, "mp4");
+					var timestamp = new Date().valueOf();
 					conn.sendMessage(
 						m.chat,
 						{
 							document: audio,
 							mimetype: "audio/mpeg",
-							fileName: `Convert By AdrianTzy.mp3`,
+							fileName: `convert-${timestamp}.mp3`,
 						},
 						{ quoted: m },
 					);
@@ -2239,8 +2197,6 @@ ${Object.keys(used)
 ◇ ‣ ${prefix}myip
 ◇ ‣ ${prefix}chat 
 ◇ ‣ ${prefix}shutdown
-◇ ‣  >
-◇ ‣  =>
 
 乂 *C O N V E R T  M E N U*
 ◇ ‣ ${prefix}stiker *<image>*
