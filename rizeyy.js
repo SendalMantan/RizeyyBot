@@ -264,7 +264,6 @@ module.exports = conn = async (conn, m, chatUpdate, store) => {
 						title: ucapanWaktu,
 						body: global.namabot,
 						previewType: "PHOTO",
-						thumbnailUrl: global.imageurl,
 						sourceUrl: global.isLink,
 					},
 				},
