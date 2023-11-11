@@ -2098,17 +2098,19 @@ ${Object.keys(used)
 			// Stalk Fitur
 			case "igstalk":
 				{
-					return newReply(`Coming soon...`);
+					// return newReply(`Coming soon...`);
 					if (args.length == 0)
 						return newReply(`Example: ${prefix + command} dementorize`);
 					newReply(mess.wait);
 					axios
 						.get(
 							`https://www.instagram.com/${args[0]}/?__a=1&__d=1`,
+							{},
+							{headers:
+								{Cookie: 'mid=ZQqobwALAAEac6xuVT3pJXesax2y; ig_did=67C5641D-31FE-4B3F-A4B3-F87BF70FB071; ig_nrcb=1; datr=2a5PZUXqEEy3CZCWQLFqF6mZ; csrftoken=bCuGE41bmqCAB7Vd3OEi3m5ye3EIaeC9; ds_user_id=62775919000; sessionid=62775919000%3A1wLP0kwHecTrgO%3A29%3AAYcO7vOLoDOaGtN3syxd6GIs1Ph8k8_d3U_qYGWC5Q; rur="VLL\05462775919000\0541731257127:01f737643bd94b6e300cfa0932e2829b48874486655681298bc85fccb59ac1e362cc6148"; dpr=2.0000000298023224'}}
 						)
 						.then(({ data }) => {
 							var data = data.qraphql.user;
-							console.log(data);
 							var caption = `Username : ${data.username}\n`;
 							caption += `Full Name : ${data.full_name || '<no name>'}\n`;
 							caption += `Posts : ${data.edge_owner_to_timeline_media.count}\n`;
