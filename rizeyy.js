@@ -2098,7 +2098,7 @@ ${Object.keys(used)
 			// Stalk Fitur
 			case "igstalk":
 				{
-					// return newReply(`Coming soon...`);
+					return newReply(`Coming soon...`);
 					if (args.length == 0)
 						return newReply(`Example: ${prefix + command} dementorize`);
 					newReply(mess.wait);
@@ -2109,7 +2109,7 @@ ${Object.keys(used)
 				"Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
 				"Cache-Control": "max-age=0",
 				Cookie:
-					'mid=ZQqobwALAAEac6xuVT3pJXesax2y; ig_did=67C5641D-31FE-4B3F-A4B3-F87BF70FB071; ig_nrcb=1; datr=2a5PZUXqEEy3CZCWQLFqF6mZ; csrftoken=bCuGE41bmqCAB7Vd3OEi3m5ye3EIaeC9; ds_user_id=62775919000; sessionid=62775919000%3A1wLP0kwHecTrgO%3A29%3AAYcO7vOLoDOaGtN3syxd6GIs1Ph8k8_d3U_qYGWC5Q; dpr=1.25; fbm_124024574287414=base_domain=.instagram.com; fbsr_124024574287414=hSZ3hlDay6utFYJYs0Ng5_-5SL4OTdWYhUaAO0jWpXs.eyJ1c2VyX2lkIjoiMTAwMDk0NDI3MDgzNjM3IiwiY29kZSI6IkFRQS1EZTJJWEljQlZibU1GeHYtZk1acGZyRHp1Q0ZOQ19GUFJ3M3Zvc2VQX0lzM3NWb2ZpeWhTeEZmckNxNlUwZzNudHVPUnMwTVZvbXNVNGFlNXZGdTF4Vk5UM2p3RnBrOUd2X3M3bVNfVEVHOU1aZkdRRzB0M1BvdlBfaVBuU1F2cm1vcTN3YzFBLWpMNHZyakZ6QXl5Q3JDVzdnQW9IRVI0Vnh1VnUyYzRjMWFiaVZvWmZsOXhOeGVncEw1YWp3ZmpJUXBkeWVaYVM1UkFld2pwQm9lT09Pa2taeFVabnU2dVpHYkNXRFk3aDV0YWZBRGo4WDVySUtXbVlLQlV4bHNJQUxNRndWcjlJUTcwMTNoZUYtR1RZUEtjMldNcHYxX3BibTVBb3Q0bkFnckQzQzE1NE85RmhmdHV5ZllXZWs2LW1RQnJTenJSRGZXWHNIVVZXb3hIdUNjLXhaamFxZFMwOWRvMFhLWEhQUSIsIm9hdXRoX3Rva2VuIjoiRUFBQnd6TGl4bmpZQk9aQ25aQzJ5b3F1SUdTWXFkS0hRRHVuMlVaQ010VjYzWHVaQ29sWkMySDlhUUg2c05UY0pSWDUxczZkNktSSEZJNXR2eXhQcFpDVDA4RlZsSFhaQVpBMnNYTXVTcjM3Sk5yNXdnQmFHaTQ1MmtrQVpDdkMwdVMyMURaQ3Y1YU9rSlV3N1pCanJvZG5zR0l0d0FURkdTajlYSzNmYWhaQkEzak9qdUtGVnZqeDRSak1rbnNVdjF6WDhXcm5OWHd4dTRUcXRhdFlaRCIsImFsZ29yaXRobSI6IkhNQUMtU0hBMjU2IiwiaXNzdWVkX2F0IjoxNjk5NzIxMzI1fQ; rur="VLL\05462775919000\0541731257378:01f7d3fd85cfe412e2a04b08d05331fb82b18e73e78f1d092b6d6c97ded2e366b4c4c3ba"',
+					'tai',
 				Dpr: "1.25",
 				"Upgrade-Insecure-Requests": "1",
 				"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
