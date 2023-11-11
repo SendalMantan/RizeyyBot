@@ -2114,7 +2114,8 @@ ${Object.keys(used)
 				"Upgrade-Insecure-Requests": "1",
 				"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
 				"Viewport-Width": "323",
-			},
+						},
+						withCredentials: true,
 					})
 						.then(({ data }) => {
 							data = data.graphql.user;
