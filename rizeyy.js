@@ -2102,23 +2102,16 @@ ${Object.keys(used)
 					if (args.length == 0)
 						return newReply(`Example: ${prefix + command} dementorize`);
 					newReply(mess.wait);
-					axios.get(`https://www.instagram.com/${args[0]}/?__a=1&__d=1`,{},{
+					axios.get(`https://www.instagram.com/api/v1/users/web_profile_info/?username=${args[0]}`,{},{
 						headers: {
-				Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-				"Accept-Encoding": "gzip, deflate",
-				"Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
-				"Cache-Control": "max-age=0",
-				Cookie:
-					'tai',
-				Dpr: "1.25",
-				"Upgrade-Insecure-Requests": "1",
-				"User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
-				"Viewport-Width": "323",
+							X-Ig-App-Id: 1217981644879628,
+							X-ASBD-Id: 129477,
+							X-Ig-WWW-Claim: 0
 						},
 						withCredentials: true,
 					})
 						.then(({ data }) => {
-							data = data.graphql.user;
+							data = data.user;
 							var caption = `*Username* : ${data.username}\n`;
 							caption += `*ID* : ${data.id}\n`;
 							caption += `*Full Name* : ${data.full_name || "<no name>"}\n`;
