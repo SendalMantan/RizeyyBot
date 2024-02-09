@@ -2111,6 +2111,7 @@ ${Object.keys(used)
 						}
 					})
 						.then(({ data }) => {
+							console.log(data);
 							let res = data.data.user;
 							var caption = `*Username* : ${res.username}\n`;
 							caption += `*ID* : ${res.id}\n`;
