@@ -2104,10 +2104,24 @@ ${Object.keys(used)
 					newReply(mess.wait);
 					axios.get(`https://www.instagram.com/api/v1/users/web_profile_info/?username=${args[0]}`,{
 						headers: {
-							"X-Ig-App-Id": "1217981644879628",
-							"X-ASBD-Id": "129477",
-							"X-Ig-WWW-Claim": "0",
-							"User-Agent": "Mozilla/5.0 (Linux; Android 12; M2004J19C Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 Instagram 317.0.0.34.109 Android (31/12; 440dpi; 1080x2134; Xiaomi/Redmi; M2004J19C; lancelot; mt6768; pt_BR; 563459836)"
+							Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/\;q=0.8,application/signed-exchange;v=b3;q=0.7",
+							'Accept-Encoding': 'gzip, deflate, br',
+							"Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+							"Cache-Control":"max-age=0",
+							Cookie: "csrftoken=eGasfep7qdMLTHuRp2riVi; ps_l=0; ps_n=0; mid=ZcSZfgALAAFWYFu48iTrBDGK8VRR; ig_did=2476EAC5-8AD5-4B1B-A5A6-5EF556FC1702; datr=fpnEZXGTrPhaIz3XmLpwMhs-; ig_nrcb=1; dpr=1.25",
+							Dpr: "1.25",
+							"Sec-Fetch-Dest": "document",
+							"Sec-Fetch-Mode": "navigate",
+							"Sec-Fetch-Site": "none",
+							"Sec-Fetch-User": "?1",
+							"Upgrade-Insecure-Requests": 1,
+							"Viewport-Width": 392,
+							'Host': 'www.instagram.com',
+							'X-IG-APP-ID': '1217981644879628',
+							'X-ASBD-ID': '129477',
+							'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+							'User-Agent': 'Mozilla/5.0 (Linux; Android 12; M2004J19C Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 Instagram 317.0.0.34.109 Android (31/12; 440dpi; 1080x2134; Xiaomi/Redmi; M2004J19C; lancelot; mt6768; pt_BR; 563459836)',
+							'X-IG-WWW-Claim': '0'
 						}
 					})
 						.then(({ data }) => {
