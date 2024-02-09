@@ -2098,34 +2098,34 @@ ${Object.keys(used)
 			// Stalk Fitur
 			case "igstalk":
 				{
-					return newReply("Coming soon !!!");
+					// return newReply("Coming soon !!!");
 					if (args.length == 0)
 						return newReply(`Example: ${prefix + command} dementorize`);
 					newReply(mess.wait);
-					axios.get(`https://www.instagram.com/api/v1/users/web_profile_info/?username=${args[0]}`,{},{
+					axios.get(`https://www.instagram.com/api/v1/users/web_profile_info/?username=${args[0]}`,{
 						headers: {
 							"X-Ig-App-Id": "1217981644879628",
 							"X-ASBD-Id": "129477",
-							"X-Ig-WWW-Claim": "0"
-						},
-						withCredentials: true,
+							"X-Ig-WWW-Claim": "0",
+							"User-Agent": "Mozilla/5.0 (Linux; Android 12; M2004J19C Build/SP1A.210812.016; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/121.0.6167.144 Mobile Safari/537.36 Instagram 317.0.0.34.109 Android (31/12; 440dpi; 1080x2134; Xiaomi/Redmi; M2004J19C; lancelot; mt6768; pt_BR; 563459836)"
+						}
 					})
 						.then(({ data }) => {
-							data = data.user;
-							var caption = `*Username* : ${data.username}\n`;
-							caption += `*ID* : ${data.id}\n`;
-							caption += `*Full Name* : ${data.full_name || "<no name>"}\n`;
-							caption += `*Verified* : ${data.is_verified ? "✅" : "❎"}\n`;
-							caption += `*Privated* : ${data.private ? "✅" : "❎"}\n`;
-							caption += `*New Account* : ${data.is_joined_recently ? "✅" : "❎"}\n`;
-							caption += `*Business Account* : ${data.is_business_account ? "✅" : "❎"}\n`;
-							caption += `*Professional Account* : ${data.is_professional_account ? "✅" : "❎"}\n`;
-							caption += `*Posts* : ${data.edge_owner_to_timeline_media.count}\n`;
-							caption += `*Followers* : ${data.edge_followed_by.count}\n`;
-							caption += `*Following* : ${data.edge_follow.count}\n`;
-							caption += `*Bio* : ${data.biography || "<no bio>"}`;
+							let res = data.data.user;
+							var caption = `*Username* : ${res.username}\n`;
+							caption += `*ID* : ${res.id}\n`;
+							caption += `*Full Name* : ${res.full_name || "<no name>"}\n`;
+							caption += `*Verified* : ${res.is_verified ? "✅" : "❎"}\n`;
+							caption += `*Privated* : ${res.private ? "✅" : "❎"}\n`;
+							caption += `*New Account* : ${res.is_joined_recently ? "✅" : "❎"}\n`;
+							caption += `*Business Account* : ${res.is_business_account ? "✅" : "❎"}\n`;
+							caption += `*Professional Account* : ${res.is_professional_account ? "✅" : "❎"}\n`;
+							caption += `*Posts* : ${res.edge_owner_to_timeline_media.count}\n`;
+							caption += `*Followers* : ${res.edge_followed_by.count}\n`;
+							caption += `*Following* : ${res.edge_follow.count}\n`;
+							caption += `*Bio* : ${res.biography || "<no bio>"}`;
 							conn.sendMessage(m.chat, {
-								image: { url: data.profile_pic_url_hd },
+								image: { url: res.profile_pic_url_hd },
 								caption,
 							});
 						});
