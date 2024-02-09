@@ -2098,7 +2098,6 @@ ${Object.keys(used)
 			// Stalk Fitur
 			case "igstalk":
 				{
-					return newReply(`Coming soon...`);
 					if (args.length == 0)
 						return newReply(`Example: ${prefix + command} dementorize`);
 					newReply(mess.wait);
