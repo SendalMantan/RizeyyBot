@@ -2103,9 +2103,9 @@ ${Object.keys(used)
 					newReply(mess.wait);
 					axios.get(`https://www.instagram.com/api/v1/users/web_profile_info/?username=${args[0]}`,{},{
 						headers: {
-							X-Ig-App-Id: 1217981644879628,
-							X-ASBD-Id: 129477,
-							X-Ig-WWW-Claim: 0
+							"X-Ig-App-Id": "1217981644879628",
+							"X-ASBD-Id": "129477",
+							"X-Ig-WWW-Claim": "0"
 						},
 						withCredentials: true,
 					})
